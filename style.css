@@ -1,0 +1,141 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.contain {
+    background-color: black;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    padding: 30px 0;
+}
+
+ul li {
+    display: inline-block;
+    list-style: none;
+
+
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.logo {
+    width: 40px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+.content .text {
+    width: 40%;
+    color: white;
+}
+
+.content .text h2 {
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.content .text p {
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.content .text a {
+    text-decoration: none;
+    background: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+.content .image {
+    width: 30%;
+}
+
+.content .image img {
+    width: 180px;
+}
+
+.icons {
+    /* position absolute move according to the parent the parent is contain so you must do in contain position relative position: */
+    position: absolute;
+    left: 50%;
+    /* Positions the left  of the element at 50% of the parent’s width */
+    transform: translateX(-50%);
+    /* Moves the element left by 50% of its own width to truly center it */
+    bottom: 20px;
+}
+
+.icons img {
+    width: 40px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    transform: scale(1.5);
+}
+
+ul li a:hover {
+    color: blue;
+}
+
+/* Styles for mobile devices */
+@media (max-width: 480px) {
+
+    header {
+
+        flex-direction: column;
+        text-align: center;
+        width: 80%;
+        gap: 20px;
+    }
+
+    .content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .content .text {
+        width: 40%;
+        text-align: center;
+    }
+
+    .content .text h2 {
+        font-size: 30px;
+    }
+
+    .content .image {
+        margin-bottom: 100px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+}
